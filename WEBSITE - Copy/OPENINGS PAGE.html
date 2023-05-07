@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+  <!-- Page Title-->
+  <title>Bhavya's Chess Catalogue</title>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Bhavya Patel"/>
+  <meta name="viewport" content="width=device-width">
+
+<!-- Link personal stylesheet -->
+  <link href="chesswebsite.css" rel="stylesheet">
+
+  <!-- Link League Spartan Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Link Nunito Font (body)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <!--Link Courier Prime Mono Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+  <!-- Link Bootstrap CSS Files-->
+  <link rel="stylesheet" href="../bootstrap-5.0.2/dist/css/bootstrap.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+  <body>
+       <!-- Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid d-flex justify-content-end">
+      <!--Brand Name-->
+      <a class="navbar-brand ps-3 me-auto" href="#">Bhavya's Chess Catalogue</a>
+      <!--Navbar button when the width is less than large-->
+      <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" \
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Moves all the content to the end-->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="nav-item px-4 mx-3 my-auto">
+            <!--Home Page Link-->
+            <a class="nav-link not_active d-flex flex-row" aria-current="page" href="HOME PAGE.html">
+              <div class="pe-1">
+                <img src="Images/Navbar Icons/Chess_Queen.svg" class = "img-fluid nav_icon">
+                <div class="line_1"></div>
+              </div>
+              <p class="mt-2 nav_text">Home</p>
+              </a>
+          </div>
+          <!--Rules Page Link-->
+          <div  class="nav-item px-4 mx-3 my-auto">
+            <a class="nav-link not_active d-flex flex-row" aria-current="page" href="RULES PAGE.HTML">
+              <div class="pe-1">
+                  <img src="Images/Navbar Icons/Chess_Knight.svg" class = "img-fluid nav_icon">
+                  <div class="line_1"></div>
+              </div>
+              <p class="mt-2 nav_text">Rules</p>
+            </a>
+          </div>
+          <!--Openings Pages Dropdown-->
+          <div class="nav-item dropdown px-4 mx-3 my-auto">
+            <!--Dropdown Toggle-->
+              <a class="nav-link active d-flex flex-row" 
+              href="#" 
+              id="navbarDropdownMenuLink" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false">
+                  <div class="pe-1">
+                    <img src="Images/Navbar Icons/Chess_Rook.svg" class = "img-fluid nav_icon">
+                    <div class="line_1"></div>
+                  </div>
+                  <p class = "mt-2 nav_text">Openings</p>
+              </a>
+              <!--Dropdown Menu-->
+              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href = "OPENINGS PAGE.html">Introduction</a></li>
+                  <li><a class="dropdown-item" href="BLACK OPENINGS PAGE.html">Black</a></li>
+                  <li><a class="dropdown-item" href="WHITE OPENINGS PAGE.html">White</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <!--Instagram Logo is located outside of the collapsible section-->
+        <div class="nav-item"> 
+            <a class="nav-link not_active mb-2 mt-2" href = "#">
+            <img src = "Images/Navbar Icons/icons8-instagram.svg" class = "nav_icon">
+            </a>
+        </div>
+    </div>
+  </nav>
+
+  <!--Header which is seperated in two sides, the black side and white side-->
+  <header class = "container-fluid d-flex flex-row">
+    <div class = "black_half background-image d-flex flex-column justify-content-center align-items-center">
+      <p class = "h2 mb-5 fade_left animate__animated invisible ">Black</p>
+      <!--Call to action button to the black openings page-->
+      <a class = "btn-lg btn-outline-secondary px-3 fade_left animate__animated invisible" href = "BLACK OPENINGS PAGE.html">Start Now</a>
+    </div>
+    <div class = "seperation_line"></div>
+    <div class = "white_half background-image d-flex flex-column justify-content-center align-items-center">
+      <p class = "h2 mb-5 fade_right animate__animated invisible">White</p>
+      <!--Call to action to the black openings page-->
+      <a class = "btn-lg btn-outline-secondary px-3 fade_right animate__animated invisible" href = "WHITE OPENINGS PAGE.html">Start Now</a>
+    </div>
+  </header>
+
+  <main> 
+      <p class = "h2 text-center mt-5 fade_down animate__animated invisible">Importance of Openings</p>
+      <div class = " mx-auto d-block line_heading mb-3 fade_down animate__animated invisible"></div>
+      <div class = "card-dark mx-5">
+        <p class = "body_text text-center text-wrap mt-2 mx-5 fade_down animate__animated invisible">
+Openings are a sequence of moves at the beginning of a chess game. Essentially, 
+these openings help players get an edge over their opponent in the early stages of the game. 
+They essentially give them an aspect of control over the infinite possibilities of moves, and can ease into a familiar/advantageous middle game.  
+It can be very useful to learn an opening so that there are more opportunities for counterplay in the future. Many popular openings at the beginner and
+ intermediate level revolve around the basic principles of chess. The first is control over the central 4 squares; d4, d5, e4 and e5. The main reason for this is because these 
+ squares give the most possibilities for pieces to move, and can be used to start an attack on both the king and queen sides.  Moreover, these openings help with piece development. 
+ Piece development is the action of moving the larger pieces, mainly the bishops and knights, off of their initial rank and giving them a more active position on the board. 
+ Doing this early on in the game prevents enemy infiltration into the position, and allows for castling the king to safety. 
+
+        </p>
+      <img src = "Images/ScenicImages/Caro.png" class = "fade_down animate__animated invisible d-block mx-auto w-50 py-5">
+      </div>
+  </main>
+
+  <div class = "card container mb-5" id = "example_opening">
+    <div class = "card-header row">
+      <div class = "col-lg-10">
+          <p class = "h2 mt-4 ms-3">How The Openings Trainer Works</p>
+      </div>    
+      <div class = "col-lg-2 my-auto">
+          <button class = "btn-lg btn-danger d-block mx-auto" data-bs-toggle="collapse" href="#exampleopeningcollapse" role="button"
+          aria-expanded="false" aria-controls="exampleopeningcollapse"">
+              Expand
+              <img src = "Images/right_arrowhead.svg" class = "expand_button ms-1">
+          </button>
+      </div>
+    </div>
+    <div class = "card-body collapse" id = "exampleopeningcollapse">
+      <p class = "body_text text-center">Click the information button for any component to learn more</p>
+      <!--House every element inside a container fluid to use the grid system-->
+        <div class = "container-fluid">
+          <div class = "row">
+              <p class = "h3">London System</p>
+          </div>
+
+          <!--Start Frame-->
+          <div class = "row mb-5" id = "startFrame">
+            <!--Column with the board and information button-->
+            <div class = "col-lg-6">
+              <!--Information Popover-->
+              <button data-bs-toggle="popover" title="Chess Board" data-bs-trigger="focus"
+              data-bs-content="
+              For each opening, there will be a board so that you can visually 
+              take note of the position. 
+              " class = "info_button m-3">
+                <img src = "Images/information-button-svgrepo-com.svg" class = "info_button">
+              </button>
+              <div class = "board d-block mx-auto">
+                <div class = "ratio ratio-1x1">
+                  <img src = "Images/Example Opening Board/1. d4.png">
+                </div>
+              </div>
+            </div>
+            <!--Column with the start now button and description-->
+            <div class = "col-lg-6 p-5">
+              <!--Flexbox so that the information button is beside the start learning one-->
+              <div class = "d-flex flex-row justify-content-center">
+                <button class = "btn btn-outline-primary mt-5 me-3" id = "start_learning_example" 
+                onclick="change_variation()">Start Learning</button>
+    
+                <!--Information Popover-->
+                <button data-bs-toggle="popover" title="Start Learning" data-bs-trigger="focus"
+                data-bs-content="
+                To begin learning about the different variations of the opening, press
+                the Start Learning button.
+                " class = "info_button mt-5">
+                  <img src = "Images/information-button-svgrepo-com.svg" class = "info_button">
+                </button>
+              </div>
+
+              <div class = "d-flex justify-content-center">
+
+                <!--Information Popover-->
+                <button data-bs-toggle="popover" title="Algebraic Notation" data-bs-placement="left" data-bs-trigger="focus"
+                data-bs-content="
+                The algebraic notation for the moves will be displayed for each move,
+                along with information on the position, opportunities for attack, etc. 
+                " class = "info_button me-5">
+                  <img src = "Images/information-button-svgrepo-com.svg" class = "info_button mb-3">
+                </button>
+
+                <div class = "body_housing px-5 py-3 mt-5">
+                  <p class = "body_text">
+This is a solid queen's pawn opening, which is why d4 must be played by white. This move takes control of the center and controls the squares d4 and e5.
+                  </p>
+                  <div class = "first_move_casing d-block mx-auto">
+                    <p class = "move text-center">1. d4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--Example Variation Frame-->
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "exampleVariationFrame">
+            <div class = "col-lg-6">
+              <div class = "d-flex justify-content-start">
+                <button class = "d-block return_button" onclick = "return_start()">
+                  <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+                </button>
+    
+                <!--Information Popover-->
+                <button data-bs-toggle="popover" title="Return" 
+                data-bs-content="
+                  Missed some crucial information on the last frame? Click the return button
+                  to go back to the last frame.  
+                " class = "info_button" data-bs-trigger="focus">
+                  <img src = "Images/information-button-svgrepo-com.svg" class = "info_button mb-3">
+                </button>
+              </div>
+              <div class = "board mx-auto d-block">
+                <div class = "ratio ratio-1x1 p-5">
+                  <img src = "Images/Example Opening Board/1. ... d4 or e5.png">
+                </div>
+              </div>
+              <!--Information Popover-->
+              <button data-bs-toggle="popover" title="Common Moves" data-bs-placement="left" data-bs-trigger="focus"
+              data-bs-content="
+              Some openings have a few common moves prior to branching off into different variations. Be on the lookout
+              for a carousel that describes these moves underneath the board. 
+              " class = "info_button mt-2">
+                <img src = "Images/information-button-svgrepo-com.svg" class = "info_button img-fluid">
+              </button>
+            </div>
+
+            <div class = "col-lg-6 d-flex flex-column justify-content-center">
+              <div class = "mt-1 d-flex flex-row align-items-center">
+                  <!--Information Popover-->
+                <button data-bs-toggle="popover" title="Variations" data-bs-placement="left" data-bs-trigger="focus"
+                data-bs-content="
+                Openings have many different variations, based on your opponents moves. Each button will lead you
+                to a carousel that will explore the variation in depth
+                " class = "info_button ms-5">
+                  <img src = "Images/information-button-svgrepo-com.svg" class = "info_button">
+                </button>
+                <button class = "example_variation_button px-5 d-block mx-auto" id = "change_to_variation" 
+                  onclick="change_carousel()">Jobava London
+                  <p class = "move">2. Nc3</p>
+                </button>
+              </div>
+              <div class = "body_housing px-5 py-3 mt-5">
+                <p class = "body_text">
+Unlike the mainline, white wants to develop the knight to a more active square. However, this move blocks the c-pawn from advancing
+                </p>
+                <div class = "second_move_casing d-block mx-auto">
+                  <p class = "move text-center">1. ... Nf6</p>
+                </div>
+              </div>
+            </div>        
+          </div>
+
+          <!--Example Carousel Frame-->
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "carouselFrame">
+            <div class = "col-lg-1">
+              <button class = "d-block return_button" onclick = "return_variation()">
+                <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+              </button>
+
+              <!--Information Popover-->
+              <button data-bs-toggle="popover" title="Variation Carousel" data-bs-placement="left" data-bs-trigger="focus"
+              data-bs-content="
+              This carousel has visuals to help with analyzing the position, as well as the reasoning
+              behind each of the moves. In addition, there is a useful note on the past move in the bottom corner. 
+              " class = "info_button mt-2">
+                <img src = "Images/information-button-svgrepo-com.svg" class = "info_button">
+              </button>
+
+            </div>
+            <div class = "col-lg-11">
+              <div class = "ratio ratio-16x9">
+                <!--Carousel Containing the sequence of moves-->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src = "Images/Example Opening Board/1.png" class="d-block w-100" alt="Slide #1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Images/Example Opening Board/2.png" class="d-block w-100" alt="Slide #2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/Example Opening Board/3.png" class="d-block w-100" alt="Slide #3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/Example Opening Board/4.png" class="d-block w-100" alt="Slide #4">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
+    </div>
+
+<!--Footer-->
+<footer class = "container-fluid pb-5">
+  <div class = "row mx-5">
+    <div class = "col-lg"> 
+      <p class = "h3 pt-5 text-center">My Mission</p>
+      <p class = "body_text text-center mt-3 mx-2">
+"My mission is to provide free chess resources for beginners to help them begin their journey through the complex game of chess."
+      </p>
+    </div>
+    <div class = "col-lg">
+      <p class = "h3 pt-5 text-center">Stay Connected</p>
+      <div class="d-grid gap-4 mt-3 d-flex justify-content-center">
+        <a class = "btn btn-dark" href = "mailto:731654@pdsb.net">
+          <img src = "Images/Footer Icons/Email.svg" />
+        </a>
+        <a class = "btn btn-dark " href = "#">
+          <img src = "Images/Footer Icons/icons8-instagram.svg" />
+        </a>
+      </div>
+    </div>
+    <div class = "col-lg">
+      <p class = "h3 pt-5 text-center">Navigate</p>
+      <div class = "d-flex flex-row justify-content-center" id="homeNavigate">
+        <a href = "HOME PAGE.html" class = "footer_navigate">Home
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+      <div class = "d-flex flex-row justify-content-center" id="openingNavigate">
+        <a href = "#subFooter" class = "footer_navigate" data-bs-toggle = "collapse">Openings
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+      <div class = "collapse w-50 mx-auto" id = "subFooter">
+          <a href = "OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Introduction</a>
+          <a href = "BLACK OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Black</a>
+          <a href = "WHITE OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">White</a>
+      </div>
+      <div class = "d-flex flex-row justify-content-center" id="rulesNavigate">
+        <a href = "RULES PAGE.HTML" class = "footer_navigate">Rules
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-lg-8">
+      <div class = "footer_line ms-5 mb-2 mt-2"></div>
+      <a href = "https://www.canva.com/design/DAFbr-vlmBY/pn_eLBJiebteJKUWzj9O0w/view?utm_content=DAFbr-vlmBY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class = "ps-5 ms-5 pb-5">Bibliography</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Connect Dependency -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <!--Connect Bootstrap Javascript-->
+  <script src ="../bootstrap-5.0.2/dist/js/bootstrap.js"></script>
+    <!--Link my Javascript file-->
+  <script src = "Example_Opening.js"></script>
+    <!--Link my Animations File-->
+    <script src = "Animations.js"></script>
+</body>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+  <!-- Page Title-->
+  <title>Bhavya's Chess Catalogue</title>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Bhavya Patel"/>
+  <meta name="viewport" content="width=device-width">
+
+<!-- Link personal stylesheet -->
+  <link href="chesswebsite.css" rel="stylesheet">
+
+  <!-- Link League Spartan Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Link Nunito Font (body)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <!--Link Courier Mono Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+  <!-- Link Bootstrap CSS Files-->
+  <link rel="stylesheet" href="../bootstrap-5.0.2/dist/css/bootstrap.css">
+  
+  <!--Link Animate.css-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+<!-- Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!--Brand Name-->
+    <div class="container-fluid d-flex justify-content-end">
+    <a class="navbar-brand ps-5 me-auto" href="#">Bhavya's Chess Catalogue</a>
+    <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" \
+    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Moves all the content to the end-->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        <div class="nav-item px-4 mx-3 my-auto">
+        <!--Home Page Link-->
+            <a class="nav-link not_active d-flex flex-row" aria-current="page" href="HOME PAGE.html">
+            <div class="pe-1">
+                <img src="Images/Navbar Icons/Chess_Queen.svg" class = "img-fluid nav_icon">
+                <div class="line_1"></div>
+            </div>
+            <p class="mt-2 nav_text">Home</p>
+            </a>
+        </div>
+        <!--Rules Page Link-->
+        <div  class="nav-item px-4 mx-3 my-auto">
+          <a class="nav-link not_active d-flex flex-row" aria-current="page" href="RULES PAGE.HTML">
+            <div class="pe-1">
+                <img src="Images/Navbar Icons/Chess_Knight.svg" class = "img-fluid nav_icon">
+                <div class="line_1"></div>
+            </div>
+            <p class="mt-2 nav_text">Rules</p>
+            </a>
+        </div>
+        <!--Openings Pages Dropdown-->
+        <div class="nav-item dropdown px-4 mx-3 my-auto">
+            <a class="nav-link active d-flex flex-row" 
+            href="#" 
+            id="navbarDropdownMenuLink" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+                <div class="pe-1">
+                <img src="Images/Navbar Icons/Chess_Rook.svg" class = "img-fluid nav_icon">
+                <div class="line_1"></div>
+                </div>
+                <p class = "mt-2 nav_text">Openings</p>
+            </a>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href = "OPENINGS PAGE.html">Introduction</a></li>
+                <li><a class="dropdown-item" href="BLACK OPENINGS PAGE.html">Black</a></li>
+                <li><a class="dropdown-item" href="WHITE OPENINGS PAGE.html">White</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="nav-item"> 
+        <a class="nav-link not_active mb-2 mt-2" href = "#">
+        <img src = "Images/Navbar Icons/icons8-instagram.svg" class = "nav_icon">
+        </a>
+    </div>
+    </div>
+  </nav>
+
+<header class = "container-fluid white background-image w-100 d-flex flex-column justify-content-center p-5">
+  <div class = "container ms-5">
+    <p class = "h1 text-end ms-5 pt-5 me-5">White</p>
+    <div class = "line_heading ms-auto me-5"></div>
+  </div>
+</header>
+
+<!--The link to the page describing the London System-->
+<main class = "container d-flex justify-content-center mt-5 mb-5">
+    <a class = "opening_selection_button white_button pt-3 px-5 pb-5 text-center mb-3" href = "LONDON SYSTEM.html">
+      The London System
+    </a>
+</main>
+
+  <!--Footer-->
+  <footer class = "container-fluid pb-5">
+    <div class = "row mx-5">
+      <div class = "col-lg"> 
+        <p class = "h3 pt-5 text-center">My Mission</p>
+        <p class = "body_text text-center mt-3 mx-2">
+"My mission is to provide free chess resources for beginners to help them begin their journey through the complex game of chess."
+
+        </p>
+      </div>
+      <div class = "col-lg">
+        <p class = "h3 pt-5 text-center">Stay Connected</p>
+        <div class="d-grid gap-4 mt-3 d-flex justify-content-center">
+          <a class = "btn btn-dark" href = "mailto:731654@pdsb.net">
+            <img src = "Images/Footer Icons/Email.svg" />
+          </a>
+          <a class = "btn btn-dark " href = "#">
+            <img src = "Images/Footer Icons/icons8-instagram.svg" />
+          </a>
+        </div>
+      </div>
+      <div class = "col-lg">
+        <p class = "h3 pt-5 text-center">Navigate</p>
+        <div class = "d-flex flex-row justify-content-center" id="homeNavigate">
+          <a href = "HOME PAGE.html" class = "footer_navigate">Home
+            <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+          </a>
+        </div>
+        <div class = "d-flex flex-row justify-content-center" id="openingNavigate">
+          <a href = "#subFooter" class = "footer_navigate" data-bs-toggle = "collapse">Openings
+            <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+          </a>
+        </div>
+        <div class = "collapse w-50 mx-auto" id = "subFooter">
+            <a href = "OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Introduction</a>
+            <a href = "BLACK OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Black</a>
+            <a href = "WHITE OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">White</a>
+        </div>
+        <div class = "d-flex flex-row justify-content-center" id="rulesNavigate">
+          <a href = "RULES PAGE.HTML" class = "footer_navigate">Rules
+            <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-lg-8">
+        <div class = "footer_line ms-5 mb-2 mt-2"></div>
+        <a href = "https://www.canva.com/design/DAFbr-vlmBY/pn_eLBJiebteJKUWzj9O0w/view?utm_content=DAFbr-vlmBY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class = "ps-5 ms-5 pb-5">Bibliography</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--Connect Bootstrap Javascript-->
+  <script src ="../bootstrap-5.0.2/dist/js/bootstrap.js"> </script>
+  <!-- Connect Dependency
+    - Some Bootstrap components depend on other plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!--Link my Animations File-->
+    <script src = "Animations.js"></script>
+</body>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+  <!-- Page Title-->
+  <title>Bhavya's Chess Catalogue</title>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Bhavya Patel"/>
+  <meta name="viewport" content="width=device-width">
+
+<!-- Link personal stylesheet -->
+  <link href="chesswebsite.css" rel="stylesheet">
+
+  <!-- Link League Spartan Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Link Nunito Font (body)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <!--Link Courier Prime Mono Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+  <!-- Link Bootstrap CSS Files-->
+  <link rel="stylesheet" href="../bootstrap-5.0.2/dist/css/bootstrap.css">
+
+  <!--Link Animate.css-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  <!-- Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid d-flex justify-content-end">
+      <!--Brand Name-->
+      <a class="navbar-brand ps-3 me-auto" href="#">Bhavya's Chess Catalogue</a>
+      <!--Navbar button when the width is less than large-->
+      <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" \
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Moves all the content to the end-->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="nav-item px-4 mx-3 my-auto">
+            <!--Home Page Link-->
+            <a class="nav-link not_active d-flex flex-row" aria-current="page" href="HOME PAGE.html">
+              <div class="pe-1">
+                <img src="Images/Navbar Icons/Chess_Queen.svg" class = "img-fluid nav_icon">
+                <div class="line_1"></div>
+              </div>
+              <p class="mt-2 nav_text">Home</p>
+              </a>
+          </div>
+          <!--Rules Page Link-->
+          <div  class="nav-item px-4 mx-3 my-auto">
+            <a class="nav-link not_active d-flex flex-row" aria-current="page" href="RULES PAGE.HTML">
+              <div class="pe-1">
+                  <img src="Images/Navbar Icons/Chess_Knight.svg" class = "img-fluid nav_icon">
+                  <div class="line_1"></div>
+              </div>
+              <p class="mt-2 nav_text">Rules</p>
+            </a>
+          </div>
+          <!--Openings Pages Dropdown-->
+          <div class="nav-item dropdown px-4 mx-3 my-auto">
+            <!--Dropdown Toggle-->
+              <a class="nav-link active d-flex flex-row" 
+              href="#" 
+              id="navbarDropdownMenuLink" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false">
+                  <div class="pe-1">
+                    <img src="Images/Navbar Icons/Chess_Rook.svg" class = "img-fluid nav_icon">
+                    <div class="line_1"></div>
+                  </div>
+                  <p class = "mt-2 nav_text">Openings</p>
+              </a>
+              <!--Dropdown Menu-->
+              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href = "OPENINGS PAGE.html">Introduction</a></li>
+                  <li><a class="dropdown-item" href="BLACK OPENINGS PAGE.html">Black</a></li>
+                  <li><a class="dropdown-item" href="WHITE OPENINGS PAGE.html">White</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <!--Instagram Logo is located outside of the collapsible section-->
+        <div class="nav-item"> 
+            <a class="nav-link not_active mb-2 mt-2" href = "#">
+            <img src = "Images/Navbar Icons/icons8-instagram.svg" class = "nav_icon">
+            </a>
+        </div>
+    </div>
+  </nav>
+
+  <!--Header which is seperated in two sides, the black side and white side-->
+  <header class = "white container-fluid d-flex flex-column justify-content-center align-items-center">
+    <p class = "h1 text-center invisible fade_left animate__animated">The London System</p>
+    <div class = "opening_line mt-3 invisible fade_left animate__animated"></div>
+  </header>
+
+  <main class="container">
+    <div class ="row my-5"> 
+      <div class="col-lg-5 ge-1 invisible fade_left animate__animated">
+        <img src = "Images/London/MagnusCarlsen.jpg" alt = "The current world chess champion Magnus Carlsen of Norway " class = "img-fluid d-block h-75 mx-auto">
+        <p class = "caption body_text py-1 text-center">The current world chess champion Magnus Carlsen of Norway 
+          <a class = "Photo_Credit "href = "https://en.wikipedia.org/wiki/World_Chess_Championship">Source: Wikipedia</a>
+        </p>
+      </div>
+      <div class="col-lg-7 animate__animated fade_right">
+        <p class="h2 mt-md-3">Significance</p>
+        <div class="line_heading"></div>
+        <p class="body_text pt-3">
+The London System is a solid opening that can be played in almost any position, without regard for black's position. 
+The main reason for this is that it is based around white's development and central control. 
+The primary asset in the position is white's dark-squared bishop, as it holds a strong diagonal. 
+Of course, no opening is perfect, meaning that this opening has some cons as well. 
+Given the defensive nature of this opening, there is less pressure on black's position and thus, less chances for attack.
+In addition, the bishop on f4 is weak and can be easily traded, which can damage White's central pawn structure. 
+<br> <br>
+Interesting Facts: 
+    <ul class = "body_text">
+      <li>On chess.com around 9,523 high level games were played with the London system</li>
+      <li>Magnus Carlsen, the current world champion, uses this opening as a part of his repertoire, despite the high likelihood of draws.</li>
+    </ul>
+</p>
+      </div>
+    </div>
+  </main>
+
+  <div class = "card container container-fluid bg-dark mb-5" id = "london_opening">
+    <div class = "fade_down animate__animated">
+      <div class = "card-header row">
+        <p class = "h3 london p-3">London System</p>
+      </div>
+    </div>
+    <div class = "card-body">
+          <!--Start Frame-->
+          <div class = "row mb-5 fade_down animate__animated invisible" id = "startFrame">
+            <div class = "col-lg-6">
+              <div class = "board d-block mx-auto">
+                <div class = "ratio ratio-1x1 p-5">
+                  <img src = "Images/London/1. d4.png">
+                </div>
+              </div>
+            </div>
+            <div class = "col-lg-6 p-5">
+              <div class = "d-flex flex-column justify-content-center align-items-center">
+                <button class = "btn btn-outline-primary d-block mx-auto" id = "start_learning_london" 
+                onclick="change_variation()">Start Learning</button>
+                <div class = "body_housing px-5 py-3 mt-5">
+                  <p class = "body_text">
+This is a solid queen's pawn opening, which is why d4 must be played by white. 
+This move takes control of the center and controls the squares d4 and e5.
+                  </p>
+                  <div class = "first_move_casing d-block mx-auto">
+                    <p class = "move text-center">1. d4</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--Variation Menu Frame-->
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "londonVariationFrame">
+            <div class = "col-lg-6">
+              <button class = "d-block return_button" onclick = "return_start()">
+                <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+              </button>
+              <div class = "board mx-auto d-block">
+                <div class = "ratio ratio-1x1 ">
+                  <img src = "Images/London/SecondMove.png">
+                </div>
+              </div>
+            </div>
+            <div class = "col-lg-6 pb-5 mt-5"> 
+              <div class = " d-flex h-100 flex-column justify-content-end align-items-center">
+                <button class = "example_variation_button px-5 d-block mx-auto mb-5"
+                onclick="change_mainline()">Mainline
+                  <p class = "move">1. ... d5</p>
+                </button>
+                <button class = "example_variation_button px-5 d-block mx-auto mb-5" 
+                onclick="change_indian()">Indian Setup
+                  <p class = "move">1. ... Nf6 2. Nc3</p>
+                </button>
+                <button class = "example_variation_button px-5 d-block mx-auto" 
+                onclick="change_queen()">Queen's Indian
+                  <p class = "move">1. ... Nf6 2. Bf4</p>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Mainline Carousel Frame-->
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "mainlineFrame">
+              <!--Return Button-->
+            <div class = "col-lg-1">
+              <button class = "d-block return_button" onclick = "return_variation()">
+                <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+              </button>
+            </div>
+            <!--Carousel-->
+            <div class = "col-lg-11">
+              <div class = "ratio ratio-16x9">
+                <!--Carousel Containing the sequence of moves-->
+                <div id="carouselMainlineControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src = "Images/London/Mainline/1.png" class="d-block w-100" alt="Slide #1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Images/London/Mainline/2.png" class="d-block w-100" alt="Slide #2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/3.png" class="d-block w-100" alt="Slide #3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/4.png" class="d-block w-100" alt="Slide #4">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/5.png" class="d-block w-100" alt="Slide #5">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/6.png" class="d-block w-100" alt="Slide #6">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/7.png" class="d-block w-100" alt="Slide #7">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/8.png" class="d-block w-100" alt="Slide #8">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/9.png" class="d-block w-100" alt="Slide #9">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/10.png" class="d-block w-100" alt="Slide #10">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/11.png" class="d-block w-100" alt="Slide #11">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/12.png" class="d-block w-100" alt="Slide #12">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/13.png" class="d-block w-100" alt="Slide #13">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/14.png" class="d-block w-100" alt="Slide #14">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/15.png" class="d-block w-100" alt="Slide #15">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/16.png" class="d-block w-100" alt="Slide #16">
+                    </div>
+                    <div class="carousel-item">
+                      <img src = "Images/London/Mainline/17.png" class="d-block w-100" alt="Slide #17">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainlineControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselMainlineControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Indian Setup Carousel Frame-->
+        <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "indianFrame">
+            <!--Return Button-->
+          <div class = "col-lg-1">
+            <button class = "d-block return_button" onclick = "return_variation()">
+              <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+            </button>
+          </div>
+          <!--Carousel-->
+          <div class = "col-lg-11">
+            <div class = "ratio ratio-16x9">
+              <!--Carousel Containing the sequence of moves-->
+              <div id="carouselIndianControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src = "Images/London/Indian_Setup/1.png" class="d-block w-100" alt="Slide #1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Images/London/Indian_Setup/2.png" class="d-block w-100" alt="Slide #2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src = "Images/London/Indian_Setup/3.png" class="d-block w-100" alt="Slide #3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src = "Images/London/Indian_Setup/4.png" class="d-block w-100" alt="Slide #4">
+                  </div>
+                  <div class="carousel-item">
+                    <img src = "Images/London/Indian_Setup/5.png" class="d-block w-100" alt="Slide #5">
+                  </div>
+                  <div class="carousel-item">
+                    <img src = "Images/London/Indian_Setup/6.png" class="d-block w-100" alt="Slide #6">
+                  </div>
+                  <div class="carousel-item">
+                    <img src = "Images/London/Indian_Setup/7.png" class="d-block w-100" alt="Slide #7">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndianControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndianControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Queen'S Indian Carousel Frame-->
+      <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "queenIndianFrame">
+          <!--Return Button-->
+        <div class = "col-lg-1">
+          <button class = "d-block return_button" onclick = "return_variation()">
+            <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
+          </button>
+        </div>
+        <!--Carousel-->
+        <div class = "col-lg-11">
+          <div class = "ratio ratio-16x9">
+            <!--Carousel Containing the sequence of moves-->
+            <div id="carouselQueenIndianControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src = "Images/London/Queen_Indian/1.png" class="d-block w-100" alt="Slide #1">
+                </div>
+                <div class="carousel-item">
+                  <img src="Images/London/Queen_Indian/2.png" class="d-block w-100" alt="Slide #2">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/3.png" class="d-block w-100" alt="Slide #3">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/4.png" class="d-block w-100" alt="Slide #4">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/5.png" class="d-block w-100" alt="Slide #5">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/6.png" class="d-block w-100" alt="Slide #6">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/7.png" class="d-block w-100" alt="Slide #7">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/8.png" class="d-block w-100" alt="Slide #8">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/9.png" class="d-block w-100" alt="Slide #9">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/10.png" class="d-block w-100" alt="Slide #10">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/11.png" class="d-block w-100" alt="Slide #11">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/12.png" class="d-block w-100" alt="Slide #12">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/13.png" class="d-block w-100" alt="Slide #13">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/14.png" class="d-block w-100" alt="Slide #14">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/15.png" class="d-block w-100" alt="Slide #15">
+                </div>
+                <div class="carousel-item">
+                  <img src = "Images/London/Queen_Indian/16.png" class="d-block w-100" alt="Slide #16">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselQueenIndianControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselQueenIndianControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div> 
+
+<!--Footer-->
+<footer class = "container-fluid pb-5">
+  <div class = "row mx-5">
+    <div class = "col-lg"> 
+      <p class = "h3 pt-5 text-center">My Mission</p>
+      <p class = "body_text text-center mt-3 mx-2">
+"My mission is to provide free chess resources for beginners to help them begin their journey through the complex game of chess."
+      </p>
+    </div>
+    <div class = "col-lg">
+      <p class = "h3 pt-5 text-center">Stay Connected</p>
+      <div class="d-grid gap-4 mt-3 d-flex justify-content-center">
+        <a class = "btn btn-dark" href = "mailto:731654@pdsb.net">
+          <img src = "Images/Footer Icons/Email.svg" />
+        </a>
+        <a class = "btn btn-dark " href = "#">
+          <img src = "Images/Footer Icons/icons8-instagram.svg" />
+        </a>
+      </div>
+    </div>
+    <div class = "col-lg">
+      <p class = "h3 pt-5 text-center">Navigate</p>
+      <div class = "d-flex flex-row justify-content-center" id="homeNavigate">
+        <a href = "HOME PAGE.html" class = "footer_navigate">Home
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+      <div class = "d-flex flex-row justify-content-center" id="openingNavigate">
+        <a href = "#subFooter" class = "footer_navigate" data-bs-toggle = "collapse">Openings
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+      <div class = "collapse w-50 mx-auto" id = "subFooter">
+          <a href = "OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Introduction</a>
+          <a href = "BLACK OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">Black</a>
+          <a href = "WHITE OPENINGS PAGE.html" class = "sub_footer_navigate d-block text-center">White</a>
+      </div>
+      <div class = "d-flex flex-row justify-content-center" id="rulesNavigate">
+        <a href = "RULES PAGE.HTML" class = "footer_navigate">Rules
+          <img src = "Images/right_arrowhead.svg" class = "footer_icon ms-3">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-lg-8">
+      <div class = "footer_line ms-5 mb-2 mt-2"></div>
+      <a href = "https://www.canva.com/design/DAFbr-vlmBY/pn_eLBJiebteJKUWzj9O0w/view?utm_content=DAFbr-vlmBY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class = "ps-5 ms-5 pb-5">Bibliography</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Connect Dependency -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
+  <!--Connect JQuery, which is needed for the animation-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--Connect Bootstrap Javascript-->
+  <script src ="../bootstrap-5.0.2/dist/js/bootstrap.js"></script>
+    <!--Link my Javascript file-->
+  <script src = "London_System.js"></script>
+    <!--Link my Animations File-->
+  <script src = "Animations.js"></script>
+</body>
+

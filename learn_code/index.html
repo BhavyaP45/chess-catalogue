@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Bootstrap Using Compiled Source Materia-->
+    <link rel="stylesheet" href="bootstrap-5.0.2/dist/css/bootstrap.css"/>
+
+    <style>
+        [class*="col"] {
+            padding: 1rem;
+            background-color: blue;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 2%;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 2%;
+        }
+        .example_box {
+            border: 3px solid black;
+            width: 50%;
+            margin: auto;
+
+        }
+        [class*="primary"] {
+            background-color: red;
+            border: 3px solid green ;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container contains rows and columns
+    Container fluid does not leave a side margin, and takes entire width
+    Can specify breakpoint, ex: container-md will do container fluid
+    for everything under md, but keep margins after.
+    -->
+    <h1>Grid Layout</h1>
+    <h2>Example 1</h2>
+    <div class = "container-fluid">
+        <div class="row"> 
+            <!--Columns should equal to 12,
+            If there are more they are gonna wrap.
+            If the column breakpoint is not specified, the each one will 
+            be divided by the width no matter the size.
+            -->
+            <!--If column has a breakpoint, the column will take the full
+            width at that size. If theres a bigger screen, then it will be 
+            divided by the num of columns.-->
+           <div class="col-sm" >1</div>
+           <div class="col-sm" >2</div>
+           <div class="col-sm" >3</div>
+        </div>
+        <div class="row"> 
+            <div class="col-sm">4</div>
+            <div class="col-sm">5</div>
+        </div>
+    </div>
+    
+    <h2>Example 2</h2>
+    <div class="container">
+        <div class="row">
+            <!--Specifying the width of the columns when breakpoint is specified
+            The ratio is maintained when the width is above the specified
+            When its below one, then it will be full width-->
+            <!-- Can be used without a breakpoint, and the ratio will be 
+            maintained. Like previously mentioned, it will divide no matter the 
+            size
+            Auto sizes elements based on the natural width of the content.
+            To create columns that are equal width across multiple rows, add
+            .w-100 class where you want the columns to break into a new line.
+            -->
+            <div class="col-md-8">Main content</div>
+            <div class="col-md-4">Sidebar</div>
+        </div>
+    </div>
+   
+    <h2>Example 3</h2>
+    <div class="container">
+        <!-- Gutter allows spacing between rows and columns. Gutter
+            is used for both padding and margin, gx is for x and affects 
+            padding while gy affects margin for y. Putting only g controls both
+            Up to 5-->
+        <div class="row gx-1">
+            <!-- Elements can have multiple classes, seperated by a space.
+            In this case, there are different ratios widths based on 
+            each breakpoint. -->
+            <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                Amogus
+            </div>
+            <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                Amogus
+            </div>
+        </div>
+    </div>
+
+    <div class = "container">
+    <h1>Button Section</h1>
+        <div>
+            <!--Boostrap buttons require btn class, as well as one specifying 
+            type of button. There are 9 predetermined buttons
+            Using specific buttons helps with consistency-->
+            <h2>Buttons</h2> 
+            <button type="button" class ="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-link">Link</button>
+        </div>
+        <div class="container">
+            <!--Outline is a different style of button-->
+            <h2>Outline</h2>
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+        </div>
+        <div class="container">
+            <!--Use sm, lg to specify button sizes (Increases efficiency)
+            Note, adding btn class already makes the button regular sized-->
+            <h2>Sizing</h2>
+            <button type="button" class="btn btn-primary btn-lg">Large</button>
+            <button type="button" class="btn btn-primary btn-sm">Small</button>
+        </div>
+        <div class="container">
+            <h2>Button Groups
+            </h2>
+            <!--Button Groups allow the grouping of buttons next to each other-->
+            <!--Note, aria label is a label that is read out when assistive 
+            technology is used-->
+            <div class="btn-group" role="group" aria-label="Basic Example">
+               <button type="button" class="btn btn-primary btn-lg">Large</button>
+               <button type="button" class="btn btn-primary btn-sm">Small</button> 
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <h1>Cards</h1>
+        <!--Wrap components, and can apply different classes to make it more 
+            visible. Requires one div to represent the card and can have 
+            card head, body and footer.
+            Create custom styles or use grid system to control size. If omitted,
+            it will take the entire width
+            -->
+        <div class="card"> 
+            <div class="card-header">Header for Cards</div>
+                <div class="row g-0"> <!--Use rows to create a responsive design-->
+                    <div class="col-md-4">
+                        <img 
+                        class="img-fluid"
+                        src="https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"
+                        />
+                    </div>
+                <!--Change colour using bg and fg, with primary, secondary, etc keywords (define those in classes)
+                Change border using border class, while specifying color the same-->
+                    <div class="col-md-8 bg-primary">
+                        <div class="card-body">
+                            <h4 class="card-title">Title in body</h4>
+                                <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Morbi vel metus vehicula, accumsan lectus eu, commodo dui.
+                            Suspendisse sit amet lectus diam. 
+                            Donec ut turpis ullamcorper nunc egestas ultricies at et elit. 
+                            Vivamus ut nisi et mi luctus rutrum sit amet at odio. 
+                            Curabitur mollis enim sit amet consequat pharetra.
+                            Curabitur tincidunt tincidunt finibus.    
+                            </p>
+                        </div>
+                        <div class="card-footer">Footer</div>
+                    </div>
+                </div>
+        </div>
+    <!--Putting cards in div called card-group then you can make a group
+    similar to the button group-->
+    </div>
+
+    <div class="container">
+        <!--Bootstrap has heading and display classes that makes any text
+        look like headings -->
+        <h2>Typography</h2>
+        <h1 class="display-1">Hello World</h1>
+        
+        <h3>List Unstyled</h3>
+        <!--List unstyled class removes the bullet points from the list-->
+        <ul class="list-unstyled">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <!--Eliminates the need for CSS-->
+        <ul class="list-inline">
+            <li class="list-inline-item">a</li>
+            <li class="list-inline-item">b</li>
+            <li class="list-inline-item">c</li>
+        </ul>
+    </div>
+
+    <h2>Images </h2>
+    <!--Img Fluid always try to keep 100% size ratio with no overflow-->
+    <div class="container">
+        <img src = "https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"
+        class="img-fluid"/>
+    </div>
+    <!--Similar to css, auto for margin will split it amongst both sides axis
+    For example, mx-auto centres an image.-->
+    <div class="container">
+        <!--Aligning the images is easy using float class (start or end)-->
+        <img src = "https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"
+        class="rounded float-start">
+        <!--Makes content start after the image-->
+        <div class="clearfix"></div>
+    </div>
+
+    <!--Connect Bootstrap JS-->
+    <script src = "bootstrap-5.0.2/dist/js/bootstrap.js"> </script>
+    <!-- Connect Dependancy
+    - Some Bootstrap componenets depend on other plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

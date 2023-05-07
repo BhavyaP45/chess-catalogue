@@ -1,0 +1,645 @@
+/*Sets the root em size for the rest of the document (consistency) */
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #1E1E1E !important;
+    font-family: "League Spartan", "Geneva" , "Arial", sans-serif !important;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #1E1E1E !important;
+    /*Reduces Width of Navigation*/
+    padding: 0rem !important;
+}
+
+/* Line underneath the nav icon */
+.line_1 {
+    height: 2px;
+    background-color: white;
+    width: 2rem;
+    margin-left: calc(0.25rem + 0.25vw);
+}
+
+
+.navbar .navbar-nav a.nav-link:hover .line_1{
+    background-color: #E41D3A;
+}
+
+.navbar .navbar-nav a.nav-link, 
+a.navbar-brand {
+    font-family:'League Spartan', sans-serif;
+    font-size: calc(1.2rem + 0.5vw);
+    color: white;
+}
+
+.navbar .navbar-nav a.nav-link a.navbar-item {
+    font-family:'League Spartan', sans-serif;
+    font-size: calc(1rem + 0.5vw);
+    color: white;
+}
+
+/*Changes the colour of the SVG for the active one. This means that multiple
+svgs do not need to be created for the active and inactive icons. It needs to start
+at black to be effective
+Source to change hex into CSS filter: 
+https://codepen.io/sosuke/pen/Pjoqqp
+*/
+/*Turns the icon white*/
+.nav_icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+/* Turns the active icon to aqua*/
+a.active .nav_icon {
+    filter: invert(56%) sepia(69%) saturate(303%) hue-rotate(127deg) brightness(95%) contrast(84%);
+}
+
+/*Changes the hover colour to a shade of red*/
+.navbar a.nav-link.not_active:hover .nav_icon {
+    filter: invert(28%) sepia(94%) saturate(7099%) hue-rotate(344deg) brightness(94%) contrast(89%);
+}
+
+li a.dropdown-item {
+    font-size: calc(1.25rem + 0.5vw);
+    color: white;
+}
+
+.navbar div.nav-item a.nav-link.active .nav_text{
+    color: #4FABA5 ;
+}
+
+.active .line_1 {
+    background-color: #4FABA5 !important;
+}
+
+/*Specify path to override default bootstrap styling for hovering
+After trial and error, (0, 4, 1) specificity is needed to override it.  */
+
+.navbar .navbar-nav a.nav-link.not_active:hover {
+    color: #E41D3A;
+}
+
+.navbar .navbar-nav div.nav-item.dropdown li a.dropdown-item:hover {
+    background-color: #E41D3A;
+}
+
+/* Page Heading*/
+
+/*Different header colour for first page*/
+.title-page {
+    background-color: #08262C;
+
+}
+
+header {
+    height: 88vh;
+    padding: 0rem !important;
+}
+
+.background-image {
+    background-image: url("Images/ScenicImages/HeaderBackground.png");
+    width: 90rem;
+    background-repeat:no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.mask {
+    background-color:rgba(0, 0, 0, 0.46);
+    height: 100%;
+    width: 200%;
+
+}
+/* The font size is variable, and resizes based on screensize */
+header .h1 {
+    color: #fff;
+    font-size: calc(2.3rem + 3vw);
+    text-align: center;
+
+}
+
+/*Call to Action buttons */
+header.title-page div.flex-row button.btn-outline-primary.btn-lg {
+    color: #A8F1FD;
+    font-size: calc(1.7rem + 0.3vw);
+    border: solid white;
+    border-radius: 0;
+}
+/*Hover Effects */
+header.title-page div.flex-row button.btn-outline-primary.btn-lg:hover {
+    color: #08262C;
+    background-color: white;
+}
+
+.h2 {
+    color: #A8F1FD;
+    font-size: calc(1.5rem + 2vw) !important;
+
+  }
+
+
+.h3 {
+    color:#fff;
+    font-size: calc(1.7rem + 0.6vw) !important;
+}
+.filler_image {
+    width: calc(15rem + 0.5vw) ;
+    height: 20rem;
+    background-color: grey;
+
+}
+
+/* Decoration line underneath subheading */
+.line_heading {
+    height: 4px;
+    background-color: #E41D3A;
+    width: 10rem;
+}
+
+/*Body Text*/
+.body_text {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: calc(1.1rem + 0.2vw);
+}
+
+.accordion .body_text {
+    font-size: calc(1.3rem + 0.2vw);
+
+}
+
+/*About Me Card */
+.about_me {
+    background-color: #0F645F !important;
+}
+
+/*Learn More Button*/
+button.btn-outline-primary {
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: calc(1.5rem + 0.3vw);
+    border-radius: 0;
+    border:solid white;
+}
+
+button.btn-outline-primary:hover {
+    color: #0F645F;
+    font-family: 'League Spartan', sans-serif;
+    font-size: calc(1.5rem + 0.3vw);
+    border-radius: 0;
+    border:solid white;
+    background-color: white;
+}
+
+/*Change the initial arrowhead to white */
+.arrowhead {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    width: 0.8rem;
+}
+
+/*On hover, change the colour of the arrowhead to the same colour as the card background*/
+button.btn-outline-primary:hover .arrowhead {
+    filter: invert(12%) sepia(87%) saturate(5065%) hue-rotate(172deg) brightness(92%) contrast(88%);
+} 
+
+/*Footer*/
+footer {
+    background-color: #191919;
+}
+
+/*Footer subheadings*/
+footer .h3 {
+    color: #A8F1FD;
+    font-size: calc(1.5rem + 0.6vw);
+}
+
+footer .body_text {
+    font-size: calc(1rem + 0.1vw);
+}
+
+footer .btn-dark {
+    background-color: #242425;
+    border-radius: 5rem;
+}
+
+.footer_line {
+    height: 7px;
+    background-color: #4F5059;
+    width: 75vw;
+    border-radius: 20rem;
+    }
+
+.footer_navigate {
+    color: white;
+    font-size: calc(1.7rem + 0.3vw);
+    text-decoration: none;
+}
+
+.sub_footer_navigate {
+    color: white;
+    font-size: calc(1.4rem + 0.3vw);
+}
+
+/*Set the background colour of the sub footer section*/
+#subFooter {
+    background-color: #000000;
+    border-radius: 3rem;
+}
+/*Width of right arrowhead*/
+.footer_icon {
+    width: 0.8rem ;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.footer_navigate:hover {
+    color: #E41D3A;
+}
+
+/*Change the colour of the arrowhead to the same as the footer button */
+.footer_navigate:hover .footer_icon, .footer_icon:hover {
+    filter: invert(28%) sepia(94%) saturate(7099%) hue-rotate(344deg) brightness(94%) contrast(89%);
+}
+
+.sub_footer_navigate:hover {
+    color:#4FABA5;
+}
+
+/*Change the colour of the arrow to the same as the sub footer button */
+.sub_footer_navigate:hover + .sub_footer_icon {
+    filter: invert(66%) sepia(15%) saturate(1251%) hue-rotate(127deg) brightness(89%) contrast(86%);
+
+}
+
+/*Bibliography Link*/
+footer a  {
+    color: white;
+    font-size: calc(1.1rem + 0.4vw);
+}
+
+footer a:hover {
+    color: #E41D3A;
+}
+
+/*Openings Page*/
+/*Line Between the Black and White Sides In Heading*/
+.seperation_line {
+    height: 88vh;
+    width: 2vw;
+    background-color: #E41D3A;
+}
+
+/*Black half of the header*/
+.black_half {
+    background-color: #191919;
+    width: 49vw;
+    height: 88vh;
+    margin-left: -1vw; /* */
+}
+
+.black_half.background-image {
+    background-image: url(Images/ScenicImages/blackBackground.png);
+    overflow: hidden;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: left; 
+}
+
+.black_half .btn-lg.btn-outline-secondary {
+    color: #CBCACA;
+    font-size: calc(1.6rem + 0.3vw);
+    border: solid #CBCACA;
+    border-radius: 0;
+    background-color: #191919;
+    text-decoration:none ;
+}
+
+.black_half .btn-lg.btn-outline-secondary:hover {
+    color: #191919;
+    font-size: calc(1.6rem + 0.3vw);
+    border: solid #CBCACA;
+    border-radius: 0;
+    background-color: #CBCACA;
+    text-decoration:none ;
+}
+
+.black_half .h2 {
+    color:white;
+    font-size: calc(2rem + 3vw) !important /*Override the other important tag that was needed*/;
+}
+
+/*White half of the header*/
+.white_half {
+    background-color: #CBCACA;
+    width: 49vw;
+    height: 88vh;
+    margin-right: -2vw;
+}
+
+.white_half.background-image {
+    background-image: url(Images/ScenicImages/whiteBackground.png);
+    overflow: hidden;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: right; 
+}
+
+.white_half .h2 {
+    color:black;
+    font-size: calc(2rem + 3vw) !important /*Override the other important tag that was needed*/;
+    
+}
+
+.white_half .btn-lg.btn-outline-secondary {
+    color: #191919;
+    font-size: calc(1.6rem + 0.3vw);
+    border: solid #191919;
+    border-radius: 0;
+    background-color: #CBCACA;
+    text-decoration:none ;
+}
+
+.white_half .btn-lg.btn-outline-secondary:hover {
+    color: #CBCACA;
+    font-size: calc(1.6rem + 0.3vw);
+    border: solid #191919;
+    border-radius: 0;
+    background-color: #191919;
+    text-decoration:none ;
+}
+
+.xl_filler_image {
+    width: 50vw;
+    height: 40vh;
+    background-color: #4F5059;
+}
+
+/*Example Opening*/
+#example_opening {
+    background-color: #000000;
+}
+
+/*Style the arrowhead*/
+.expand_button {
+    width: 0.8rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+}
+
+.btn-lg.btn-danger {
+    font-size: calc(1.6rem + 0.3vw);
+    text-decoration: none;
+}
+
+.ratio.ratio-16x9 {
+    --bs-aspect-ratio: 56.25%;
+}
+
+.return_button {
+    width: 4rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#returntostart {
+    background-color: #000000;
+}
+
+.info_button {
+    background-color: #000000;
+}
+/*Variation Buttons*/
+.example_variation_button {
+    color: #000000;
+    background-color: #4FABA5;
+    font-size: calc(1.4rem + 0.3vw);
+    border-radius: 1rem;
+}
+
+.example_variation_button:hover {
+    color: #000000;
+    background-color: #316a66;
+
+}
+
+/*Body content for the openings*/
+.body_housing {
+    background-color: #2E2E30;
+    border-radius: 1rem;
+}
+
+/*Move Notation Custom Style*/
+.move {
+    font-family: "Courier Prime", "Courier New", monospace;
+    color: white;
+    font-size: calc(1.3rem + 0.3vw);
+
+}
+/*Colour of the move inside the variation button*/
+button .move {
+    color: black
+}
+
+.first_move_casing {
+    background-color: #E41D3A;
+    
+}
+
+.second_move_casing {
+    background-color: #316a66;
+}
+
+/*Set the background of the Black Opening Frame */
+.black {
+    background-color: #191919;
+    color: white;
+    height: 88vh;
+
+}
+
+.black.background-image {
+    background-image: url(Images/ScenicImages/blackBackground.png);
+    width: 90vw;
+    overflow: hidden;
+}
+
+.black .h1 {
+    font-size: calc(2.1 + 3vw);
+}
+
+    
+.white {
+    background-color: #CBCACA;
+    height: 88vh;
+}
+
+.white .h1 {
+    font-size: calc(2.1 + 3vw);
+    color: #000000;
+}
+
+.white.background-image {
+    background-image: url(Images/ScenicImages/whiteBackground.png);
+    width: 90vw;
+    overflow: hidden;
+}
+
+.opening_selection_button {
+    background-image: url(Images/ScenicImages/buttonNotActive.png);
+    background-color: #4F5059;
+    color: white;
+    font-size: calc(1.7rem + 0.6vw);
+    text-decoration: none;
+    height: calc(6rem + 5vh);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.white_button.opening_selection_button:hover {
+    background-image: url(Images/ScenicImages/buttonActiveWhite.png);
+    background-color: #4F5059;
+    color: white;
+    font-size: calc(1.7rem + 0.6vw);
+    text-decoration: none;
+    height: calc(9rem + 5vh);
+    width:auto;
+    display: block;
+    transition-delay: 0.1s;
+}
+
+.black_button.opening_selection_button:hover {
+    background-image: url(Images/ScenicImages/buttonActiveBlack.png);
+    background-color: #4F5059;
+    color: white;
+    font-size: calc(1.7rem + 0.6vw);
+    text-decoration: none;
+    height: calc(9rem + 5vh);
+    width:auto;
+    display: block;
+    transition-delay: 0.1s;
+}
+
+
+.opening_selection_button:hover .button_mask {
+    background-color: rgba(10, 20, 20, 0.444);
+}
+
+/*Rules Page*/
+
+/*Header*/
+header.rule {
+    background-color: #08262C;
+}
+
+header .line_heading {
+    width: 20rem;
+}
+
+.rule.background-image {
+    background-image: url(Images/ScenicImages/rulesHeader.png);
+    background-position: right;
+}
+
+
+/*Altering bg-dark class to match aesthetic */
+
+/*Alter Accordion SVG*/
+/*::after changes the last child of a parent element*/
+button.accordion-button.bg-dark::after {
+    background-image: url(Images/down-arrow-svgrepo-com.svg);
+}
+
+.chess_board {
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    width: 3rem;
+}
+
+/*Override current bg-info colour to be used for the accordion bodies*/
+.accordion-body {
+    background-color: #08262C;
+}
+
+/*Rule Board Images*/
+.rule_image {
+    border-radius: 1rem;
+    border: 0.3rem solid black ;
+}
+
+/*Accordion Subheading*/
+.accordion_subheading {
+    color: #CBCACA;
+    font-size: calc(1.1rem + 2vw);
+}
+
+/*Line under each opening heading*/
+.opening_line {
+   background-color: #0F645F;
+   height: 8px;
+   width: calc(10rem + 15vw);
+   border-radius: 2px;
+}
+
+/*Specific Opening Colours*/
+.h3.london {
+    color: #A8F1FD;
+}
+
+/*Class to size the board*/
+.board {
+    width: 85%;
+}
+
+/*Class to reduce the height of the carousel so that it fits onto the page comfortably*/
+.carousel_height {
+    height: 5%;
+}
+
+/*Add a transparent background behind the carousel caption */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.carousel_subheading {
+    color:white;
+    font-size: x-large;
+}
+
+.carousel_text {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.caption {
+    background-color: #E41D3A;
+    border-radius: 3px;
+
+}
+
+.Photo_Credit {
+    color:#87dbd5;
+    font-family: 'League Spartan', sans-serif ;
+}
+
+.animate__fadeInRight, .animate__fadeInLeft {
+    animation-delay: 600ms;
+}
+
+.animate__fadeInDown {
+    animation-delay: 500ms;
+}
+
+.accordion-body span {
+    font-family:"Courier Prime", "Courier New", monospace ;
+    background-color: #E41D3A;
+
+}
