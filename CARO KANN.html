@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 
   <!-- Link Bootstrap CSS Files-->
-  <link rel="stylesheet" href="../bootstrap-5.0.2/dist/css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!--Link Animate.css-->
   <link
@@ -101,67 +101,64 @@
   </nav>
 
   <!--Header which is seperated in two sides, the black side and white side-->
-  <header class = "white container-fluid d-flex flex-column justify-content-center align-items-center">
-    <p class = "h1 text-center invisible fade_left animate__animated">The London System</p>
-    <div class = "opening_line mt-3 invisible fade_left animate__animated"></div>
+  <header class = "black container-fluid d-flex flex-column justify-content-center align-items-center">
+    <p class = "h1 text-center invisible animate__animated fade_left">The Caro Kann Defence</p>
+    <div class = "opening_line mt-3 invisible animate__animated fade_left"></div>
   </header>
 
   <main class="container">
     <div class ="row my-5"> 
-      <div class="col-lg-5 ge-1 invisible fade_left animate__animated">
-        <img src = "Images/London/MagnusCarlsen.jpg" alt = "The current world chess champion Magnus Carlsen of Norway " class = "img-fluid d-block h-75 mx-auto">
-        <p class = "caption body_text py-1 text-center">The current world chess champion Magnus Carlsen of Norway 
-          <a class = "Photo_Credit "href = "https://en.wikipedia.org/wiki/World_Chess_Championship">Source: Wikipedia</a>
+      <div class="col-lg-5 ge-1 fade_left animate__animated invisible">
+        <img src = "Images/Caro Kann/Capablanca in 1930.jpg" class = "h-75 d-block mx-auto img-fluid ">
+        <p class = "caption body_text py-1 text-center"> Jose Raul Capablanca playing chess in 1930. 
+          <a class = "Photo_Credit "href = "https://www.chess.com/openings/Caro-Kann-Defense#history">Source: Chess.com</a>
         </p>
       </div>
-      <div class="col-lg-7 animate__animated fade_right">
-        <p class="h2 mt-md-3">Significance</p>
+      <div class="col-lg-7 animate__animated fade_right invisible">
+        <p class="h2 mt-3">Significance</p>
         <div class="line_heading"></div>
         <p class="body_text pt-3">
-The London System is a solid opening that can be played in almost any position, without regard for black's position. 
-The main reason for this is that it is based around white's development and central control. 
-The primary asset in the position is white's dark-squared bishop, as it holds a strong diagonal. 
-Of course, no opening is perfect, meaning that this opening has some cons as well. 
-Given the defensive nature of this opening, there is less pressure on black's position and thus, less chances for attack.
-In addition, the bishop on f4 is weak and can be easily traded, which can damage White's central pawn structure. 
-<br> <br>
-Interesting Facts: 
-    <ul class = "body_text">
-      <li>On chess.com around 9,523 high level games were played with the London system</li>
-      <li>Magnus Carlsen, the current world champion, uses this opening as a part of his repertoire, despite the high likelihood of draws.</li>
-    </ul>
-</p>
+The Caro Kann defence is referred to as a safe and solid opening. Black has a stable central structure, 
+and frees up the light-squared bishop for development. The main flaw is that black has less space, as they play the passive move c6. 
+However, understanding the lines can help mitigate this disadvantage and give black a solid start to the game. 
+          <br> <br>
+          Interesting Facts:
+          <ul class = "body_text">
+            <li>Around 110,007 games were played with this opening at high levels on chess.com</li>
+            <li>Got famous in the 20th century when world champion Jose Raul Capablanca used it as his main weapon against e4</li>
+          </ul>
+        </p>
       </div>
     </div>
   </main>
 
-  <div class = "card container container-fluid bg-dark mb-5" id = "london_opening">
-    <div class = "fade_down animate__animated">
+  <div class = "card container container-fluid bg-dark mb-5 fade_down animate__animated invisible" id = "caro_opening">
+    <div>
       <div class = "card-header row">
-        <p class = "h3 london p-3">London System</p>
+        <p class = "h3 london p-3">The Caro Kann</p>
       </div>
     </div>
     <div class = "card-body">
           <!--Start Frame-->
-          <div class = "row mb-5 fade_down animate__animated invisible" id = "startFrame">
+          <div class = "row mb-5 " id = "startFrame">
             <div class = "col-lg-6">
               <div class = "board d-block mx-auto">
                 <div class = "ratio ratio-1x1 p-5">
-                  <img src = "Images/London/1. d4.png">
+                  <img src = "Images/Caro Kann/1.e4.png">
                 </div>
               </div>
             </div>
             <div class = "col-lg-6 p-5">
               <div class = "d-flex flex-column justify-content-center align-items-center">
-                <button class = "btn btn-outline-primary d-block mx-auto" id = "start_learning_london" 
+                <button class = "btn btn-outline-primary d-block mx-auto" id = "start_learning_caro" 
                 onclick="change_variation()">Start Learning</button>
                 <div class = "body_housing px-5 py-3 mt-5">
                   <p class = "body_text">
-This is a solid queen's pawn opening, which is why d4 must be played by white. 
-This move takes control of the center and controls the squares d4 and e5.
+White must play e4, which is one of the most common opening moves.  
+At higher levels, this has a highest draw rate than d4, as the positions are more balanced. 
                   </p>
                   <div class = "first_move_casing d-block mx-auto">
-                    <p class = "move text-center">1. d4</p>
+                    <p class = "move text-center">1. e4</p>
                   </div>
                 </div>
               </div>
@@ -170,37 +167,46 @@ This move takes control of the center and controls the squares d4 and e5.
           </div>
           
           <!--Variation Menu Frame-->
-          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "londonVariationFrame">
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "caroVariationFrame">
             <div class = "col-lg-6">
               <button class = "d-block return_button" onclick = "return_start()">
                 <img src = "Images/si-glyph-circle-backward.svg" class = "mb-3"/>
               </button>
               <div class = "board mx-auto d-block">
                 <div class = "ratio ratio-1x1 ">
-                  <img src = "Images/London/SecondMove.png">
+                  <img src = "Images/Caro Kann/ThirdMove.png">
                 </div>
               </div>
             </div>
-            <div class = "col-lg-6 pb-5 mt-5"> 
-              <div class = " d-flex h-100 flex-column justify-content-end align-items-center">
+            <div class = "col-lg-6 pb-5 mt-5" >
+              <div class = " d-flex h-100 flex-column justify-content-end">
                 <button class = "example_variation_button px-5 d-block mx-auto mb-5"
-                onclick="change_mainline()">Mainline
-                  <p class = "move">1. ... d5</p>
-                </button>
-                <button class = "example_variation_button px-5 d-block mx-auto mb-5" 
-                onclick="change_indian()">Indian Setup
-                  <p class = "move">1. ... Nf6 2. Nc3</p>
-                </button>
-                <button class = "example_variation_button px-5 d-block mx-auto" 
-                onclick="change_queen()">Queen's Indian
-                  <p class = "move">1. ... Nf6 2. Bf4</p>
-                </button>
+                onclick="change_classical()">Classical Variation
+                <p class = "move">3. Nc3</p>
+              </button>
+              <button class = "example_variation_button px-5 d-block mx-auto mb-5" 
+              onclick="change_advance()">Advance Variation
+                  <p class = "move">3. e5</p>
+              </button>
+              <button class = "example_variation_button px-5 d-block mx-auto " 
+              onclick="change_exchange()">Exchange Variation
+                <p class = "move">3. exd5</p>
+              </button>
+              <div class = "body_housing px-5 py-3 d-block me-md-5 mt-5">
+                <p class = "body_text">
+Black responds with c6, setting up d5 in the future. There are many different
+variations that can take place from this point forward. 
+                </p>
+                <div class = "second_move_casing d-block mx-auto">
+                  <p class = "move text-center">1. ... c6</p>
+                </div>
               </div>
             </div>
-          </div>
+          </div>        
+        </div>
 
-          <!--Mainline Carousel Frame-->
-          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "mainlineFrame">
+          <!--Classical Carousel Frame-->
+          <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "classicalFrame">
               <!--Return Button-->
             <div class = "col-lg-1">
               <button class = "d-block return_button" onclick = "return_variation()">
@@ -211,65 +217,32 @@ This move takes control of the center and controls the squares d4 and e5.
             <div class = "col-lg-11">
               <div class = "ratio ratio-16x9">
                 <!--Carousel Containing the sequence of moves-->
-                <div id="carouselMainlineControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+                <div id="carouselClassicalControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src = "Images/London/Mainline/1.png" class="d-block w-100" alt="Slide #1">
+                      <img src = "Images/Caro Kann/Classical/1.png" class="d-block w-100" alt="Slide #1">
                     </div>
                     <div class="carousel-item">
-                      <img src="Images/London/Mainline/2.png" class="d-block w-100" alt="Slide #2">
+                      <img src="Images/Caro Kann/Classical/2.png" class="d-block w-100" alt="Slide #2">
                     </div>
                     <div class="carousel-item">
-                      <img src = "Images/London/Mainline/3.png" class="d-block w-100" alt="Slide #3">
+                      <img src = "Images/Caro Kann/Classical/3.png" class="d-block w-100" alt="Slide #3">
                     </div>
                     <div class="carousel-item">
-                      <img src = "Images/London/Mainline/4.png" class="d-block w-100" alt="Slide #4">
+                      <img src = "Images/Caro Kann/Classical/4.png" class="d-block w-100" alt="Slide #4">
                     </div>
                     <div class="carousel-item">
-                      <img src = "Images/London/Mainline/5.png" class="d-block w-100" alt="Slide #5">
+                      <img src = "Images/Caro Kann/Classical/5.png" class="d-block w-100" alt="Slide #5">
                     </div>
                     <div class="carousel-item">
-                      <img src = "Images/London/Mainline/6.png" class="d-block w-100" alt="Slide #6">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/7.png" class="d-block w-100" alt="Slide #7">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/8.png" class="d-block w-100" alt="Slide #8">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/9.png" class="d-block w-100" alt="Slide #9">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/10.png" class="d-block w-100" alt="Slide #10">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/11.png" class="d-block w-100" alt="Slide #11">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/12.png" class="d-block w-100" alt="Slide #12">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/13.png" class="d-block w-100" alt="Slide #13">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/14.png" class="d-block w-100" alt="Slide #14">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/15.png" class="d-block w-100" alt="Slide #15">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/16.png" class="d-block w-100" alt="Slide #16">
-                    </div>
-                    <div class="carousel-item">
-                      <img src = "Images/London/Mainline/17.png" class="d-block w-100" alt="Slide #17">
+                      <img src = "Images/Caro Kann/Classical/6.png" class="d-block w-100" alt="Slide #6">
                     </div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainlineControls" data-bs-slide="prev">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselClassicalControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselMainlineControls" data-bs-slide="next">
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselClassicalControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
@@ -277,8 +250,8 @@ This move takes control of the center and controls the squares d4 and e5.
             </div>
           </div>
         </div>
-        <!--Indian Setup Carousel Frame-->
-        <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "indianFrame">
+        <!--Advance Carousel Frame-->
+        <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "advanceFrame">
             <!--Return Button-->
           <div class = "col-lg-1">
             <button class = "d-block return_button" onclick = "return_variation()">
@@ -289,35 +262,35 @@ This move takes control of the center and controls the squares d4 and e5.
           <div class = "col-lg-11">
             <div class = "ratio ratio-16x9">
               <!--Carousel Containing the sequence of moves-->
-              <div id="carouselIndianControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+              <div id="carouselAdvanceControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src = "Images/London/Indian_Setup/1.png" class="d-block w-100" alt="Slide #1">
+                    <img src = "Images/Caro Kann/Advance/1.png" class="d-block w-100" alt="Slide #1">
                   </div>
                   <div class="carousel-item">
-                    <img src="Images/London/Indian_Setup/2.png" class="d-block w-100" alt="Slide #2">
+                    <img src="Images/Caro Kann/Advance/2.png" class="d-block w-100" alt="Slide #2">
                   </div>
                   <div class="carousel-item">
-                    <img src = "Images/London/Indian_Setup/3.png" class="d-block w-100" alt="Slide #3">
+                    <img src = "Images/Caro Kann/Advance/3.png" class="d-block w-100" alt="Slide #3">
                   </div>
                   <div class="carousel-item">
-                    <img src = "Images/London/Indian_Setup/4.png" class="d-block w-100" alt="Slide #4">
+                    <img src = "Images/Caro Kann/Advance/4.png" class="d-block w-100" alt="Slide #4">
                   </div>
                   <div class="carousel-item">
-                    <img src = "Images/London/Indian_Setup/5.png" class="d-block w-100" alt="Slide #5">
+                    <img src = "Images/Caro Kann/Advance/5.png" class="d-block w-100" alt="Slide #5">
                   </div>
                   <div class="carousel-item">
-                    <img src = "Images/London/Indian_Setup/6.png" class="d-block w-100" alt="Slide #6">
+                    <img src = "Images/Caro Kann/Advance/6.png" class="d-block w-100" alt="Slide #6">
                   </div>
                   <div class="carousel-item">
-                    <img src = "Images/London/Indian_Setup/7.png" class="d-block w-100" alt="Slide #7">
+                    <img src = "Images/Caro Kann/Advance/7.png" class="d-block w-100" alt="Slide #7">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndianControls" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAdvanceControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndianControls" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAdvanceControls" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -325,8 +298,8 @@ This move takes control of the center and controls the squares d4 and e5.
           </div>
         </div>
       </div>
-      <!--Queen'S Indian Carousel Frame-->
-      <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "queenIndianFrame">
+      <!--Exchange Variation Carousel Frame-->
+      <div class = "row mb-5 d-none fade_down animate__animated invisible" id = "exchangeFrame">
           <!--Return Button-->
         <div class = "col-lg-1">
           <button class = "d-block return_button" onclick = "return_variation()">
@@ -337,69 +310,39 @@ This move takes control of the center and controls the squares d4 and e5.
         <div class = "col-lg-11">
           <div class = "ratio ratio-16x9">
             <!--Carousel Containing the sequence of moves-->
-            <div id="carouselQueenIndianControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
+            <div id="carouselExchangeControls" class="carousel slide" data-interval="6000" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src = "Images/London/Queen_Indian/1.png" class="d-block w-100" alt="Slide #1">
+                  <img src = "Images/Caro Kann/Exchange/1.png" class="d-block w-100" alt="Slide #1">
                 </div>
                 <div class="carousel-item">
-                  <img src="Images/London/Queen_Indian/2.png" class="d-block w-100" alt="Slide #2">
+                  <img src="Images/Caro Kann/Exchange/2.png" class="d-block w-100" alt="Slide #2">
                 </div>
                 <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/3.png" class="d-block w-100" alt="Slide #3">
+                  <img src = "Images/Caro Kann/Exchange/3.png" class="d-block w-100" alt="Slide #3">
                 </div>
                 <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/4.png" class="d-block w-100" alt="Slide #4">
+                  <img src = "Images/Caro Kann/Exchange/4.png" class="d-block w-100" alt="Slide #4">
                 </div>
                 <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/5.png" class="d-block w-100" alt="Slide #5">
+                  <img src = "Images/Caro Kann/Exchange/5.png" class="d-block w-100" alt="Slide #5">
                 </div>
                 <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/6.png" class="d-block w-100" alt="Slide #6">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/7.png" class="d-block w-100" alt="Slide #7">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/8.png" class="d-block w-100" alt="Slide #8">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/9.png" class="d-block w-100" alt="Slide #9">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/10.png" class="d-block w-100" alt="Slide #10">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/11.png" class="d-block w-100" alt="Slide #11">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/12.png" class="d-block w-100" alt="Slide #12">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/13.png" class="d-block w-100" alt="Slide #13">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/14.png" class="d-block w-100" alt="Slide #14">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/15.png" class="d-block w-100" alt="Slide #15">
-                </div>
-                <div class="carousel-item">
-                  <img src = "Images/London/Queen_Indian/16.png" class="d-block w-100" alt="Slide #16">
+                  <img src = "Images/Caro Kann/Exchange/6.png" class="d-block w-100" alt="Slide #6">
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselQueenIndianControls" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExchangeControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselQueenIndianControls" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExchangeControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div> 
 
@@ -462,9 +405,9 @@ This move takes control of the center and controls the squares d4 and e5.
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <!--Connect Bootstrap Javascript-->
-  <script src ="../bootstrap-5.0.2/dist/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--Link my Javascript file-->
-  <script src = "London_System.js"></script>
+  <script src = "Caro_Kann.js"></script>
     <!--Link my Animations File-->
   <script src = "Animations.js"></script>
 </body>
